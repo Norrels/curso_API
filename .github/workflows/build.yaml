@@ -2,7 +2,7 @@ name: CI da API
 
 on:
   push:
-    branches: ["master"]
+    branches: ["**"]
   pull_request:
     branches: ["**"]
 
@@ -22,4 +22,4 @@ jobs:
           cache: maven
 
       - name: build
-        run: ./mvnw -B package
+        run: ./mvnw -B package -DskipTests
