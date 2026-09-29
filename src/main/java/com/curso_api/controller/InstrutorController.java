@@ -3,6 +3,7 @@ package com.curso_api.controller;
 import com.curso_api.dto.InstrutorRequestDTO;
 import com.curso_api.dto.InstrutorResponseDTO;
 import com.curso_api.service.InstrutorService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -12,6 +13,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/instrutores")
+@Tag(name = "Instrutores", description = "Endpoints para gerenciar instrutores")
 public class InstrutorController {
 
     private final InstrutorService instrutorService;
